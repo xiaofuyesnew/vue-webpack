@@ -4,5 +4,7 @@
 ##安装
 
 ```bash
-$   git clone git@github.com:xiaofuyesnew/vue-webpack.git && cd vue-webpack && npm install
+$   git clone git@github.com:xiaofuyesnew/vue-webpack.git
+$   cd vue-webpack
+$   npm install
 ```
