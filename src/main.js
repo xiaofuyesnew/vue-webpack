@@ -1,2 +1,5 @@
-import Vue from "vue"
+const Vue = require('vue')
+const test = require('./index.vue')
 
+
+test()
