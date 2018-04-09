@@ -1,5 +1,5 @@
-const Vue = require('vue')
-const test = require('./index.vue')
+import Vue from 'vue'
+import App from './app.vue'
 
 
-test()
+App.test()
