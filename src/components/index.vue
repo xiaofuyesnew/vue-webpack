@@ -1,5 +1,5 @@
 <template>
-  <p>Hello, {{ name }}!</p>
+  <p v-on:click="test">{{ name }}</p>
 </template>
 
 <style scoped>
@@ -13,11 +13,13 @@ p {
 export default {
   data () {
     return {
-      name: 'whatever'
+      name: 'allen'
     }
   },
-  test: () => {
-    console.log('NOOK')
+  methods: {
+    test: () => {
+      console.log('test ok !')
+    }
   }
 }
 </script>
