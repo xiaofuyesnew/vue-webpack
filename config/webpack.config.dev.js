@@ -1,18 +1,28 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+
 
 module.exports = {
-entry: path.resolve(__dirname, '../src/main.js'),
+  entry: path.resolve(__dirname, '../src/main.js'),
   output: {
     path: path.resolve(__dirname, '../dist'),
     filename: 'bundle.js'
+  },
+  resolve: {
+    alias: {
+      'vue$': 'vue/dist/vue.common.js'
+    }
   },
   module: {
     rules: [
       {
         test: /\.vue$/,
-        use: 'vue-loader',
-        exclude: /node_modules/
+        loader: 'vue-loader',
+        exclude: /node_modules/,
+        options: {
+          extractCSS: true
+        }
       },
       {
         test: /\.js$/,
@@ -21,7 +31,7 @@ entry: path.resolve(__dirname, '../src/main.js'),
       },
       {
         test: /\.css$/,
-        use: "css-loader",
+        use: ExtractTextPlugin.extract('css-loader'),
         exclude: /node_modules/
       }
     ]
@@ -29,11 +39,7 @@ entry: path.resolve(__dirname, '../src/main.js'),
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, '../src/index.html')
-    })
-  ],
-  resolve: {
-    alias: {
-      'vue$': 'vue/dist/vue.common.js'
-    }
-  }
+    }),
+    new ExtractTextPlugin('./static/css/style.css')
+  ]
 }

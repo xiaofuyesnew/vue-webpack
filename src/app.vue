@@ -3,10 +3,11 @@
     <p>{{ greeting }}</p>
     <Index/>
   </div>
-  
 </template>
 
 <style>
+  @import url(./style/common.css);
+
   .box {
     border: 1px solid #333;
   }
