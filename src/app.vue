@@ -1,5 +1,5 @@
 <script>
-import Index from './components/index.vue'
+import Index from './components/Index.vue'
 
 export default {
   test: Index.test

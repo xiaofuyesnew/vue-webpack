@@ -1,7 +1,7 @@
 <script>
 export default {
   test: () => {
-      console.log('OK')
+    console.log('NOOK')
   }
 }
 </script>
