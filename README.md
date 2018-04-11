@@ -1,7 +1,10 @@
 # vue-webpack
 
-> 这是一个个人手撸的基于webpack4的vue2脚手架  
->
-> 至于为什么手撸，额，因为喜欢造轮子，不知道算不算？  
->   
+> 一个手工打造的vue开发脚手架  
+
+> 初衷：[知乎上的一个问题](https://www.zhihu.com/question/271622369 "知乎上的一个问题")
+
+# 说明文档
+
+- [点击查看](./doc/documentation.md) 
 
