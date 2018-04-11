@@ -10,9 +10,7 @@ let testData = [{
 }]
 
 const fn_products = async (ctx) => {
-  ctx.rest({
-    data: testData
-  })
+  ctx.rest(testData)
 }
 
 module.exports = {

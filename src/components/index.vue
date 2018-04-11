@@ -19,7 +19,7 @@ export default {
     Header
   },
   methods: {
-
+    
   }
 }
 </script>

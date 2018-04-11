@@ -1,7 +1,5 @@
 <template>
-  <header>
-
-  </header>
+  <header @click="getData"></header>
 </template>
 
 <style scoped>
@@ -16,12 +14,20 @@
 </style>
 
 <script>
+import axios from 'axios'
+
 export default {
   data () {
     return {
     }
   },
   methods: {
+    getData: () => {
+      axios.get('http://localhost:3000/api/products')
+        .then(res => {
+          console.log(res)
+        })
+    }
   }
 }
 </script>
