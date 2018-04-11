@@ -1,7 +1,7 @@
 {
   "name": "vue-webpack",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "./main.js",
   "repository": "git@github.com:xiaofuyesnew/vue-webpack.git",
   "author": "xiaofuyesnew <xiaofuyesnew@qq.com>",
   "license": "MIT",
@@ -27,6 +27,7 @@
     "webpack-hot-middleware": "^2.22.0"
   },
   "scripts": {
+    "start": "npm run dev && npm run server",
     "dev": "webpack --config ./config/webpack.config.dev.js --mode development",
     "build": "webpack --config ./config/webpack.config.dev.js --mode production",
     "server": "node ./server/server.js"

@@ -7,7 +7,7 @@ const data = {
   name: 'allen'
 }
 
-new Vue ({
+const app = new Vue ({
   el: '#app',
   data: data,
   template: '<App/>',
@@ -15,3 +15,5 @@ new Vue ({
     App
   }
 })
+
+export default app

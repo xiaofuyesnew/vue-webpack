@@ -18,9 +18,7 @@ export default {
   },
   methods: {
     test: () => {
-      let that = this
       console.log('test ok !')
-      console.log(this)
     }
   }
 }
