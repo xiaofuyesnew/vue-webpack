@@ -23,3 +23,6 @@ npm start
 - [查看教程](./doc/tutorial.md)
 
 # TODO List
+
+  [x] 数据库  
+  [] 单元测试  
