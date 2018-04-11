@@ -1,25 +1,25 @@
 <template>
-  <p v-on:click="test">{{ name }}</p>
+  <Header/>
 </template>
 
 <style scoped>
-p {
-  color: #999;
-  font-size: 40px;
-}
+
 </style>
 
 <script>
+import Header from './Header.vue'
+
 export default {
   data () {
     return {
-      name: 'allen'
+
     }
   },
+  components: {
+    Header
+  },
   methods: {
-    test: () => {
-      console.log('test ok !')
-    }
+
   }
 }
 </script>

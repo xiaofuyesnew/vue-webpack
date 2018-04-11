@@ -5,11 +5,16 @@
     "es6": true,
     "node": true
   },
+  "globals": {
+    "vue": true
+  },
+  "parser": "babel-eslint",
   "extends": "eslint:recommended",
   "parserOptions": {
     "sourceType": "module"
   },
   "rules": {
+    "no-console": "off",
     "indent": [
       "error",
       2
