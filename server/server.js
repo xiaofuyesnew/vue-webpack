@@ -1,6 +1,7 @@
 const Koa = require('koa')
 const controller = require('./controller.js')
 const bodyParser = require('koa-bodyparser')
+const REST = require('./rest.js')
 
 const app = new Koa()
 
@@ -10,6 +11,8 @@ app.use(async (ctx, next) => {
 })
 
 app.use(bodyParser())
+
+app.use(REST.restify())
 
 app.use(controller())
 

@@ -10,11 +10,9 @@ let testData = [{
 }]
 
 const fn_products = async (ctx) => {
-  ctx.response.type = 'application/json'
-
-  ctx.response.body = {
-    products: testData
-  }
+  ctx.rest({
+    data: testData
+  })
 }
 
 module.exports = {
