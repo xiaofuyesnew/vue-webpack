@@ -1,3 +1,5 @@
+const APIError = require('../rest').APIError
+
 let testData = [{
   name: 'iPhone',
   price: 6000
@@ -10,7 +12,12 @@ let testData = [{
 }]
 
 const fn_products = async (ctx) => {
-  ctx.rest(testData)
+  if (testData) { 
+    ctx.rest(testData)
+  } else {
+    throw new APIError('product wrong', 'product wrong wrong wrong')
+  }
+  
 }
 
 module.exports = {
