@@ -8,10 +8,10 @@
 
 ```bash
 # 如果你用npm
-npm install && cd server && npm install && cd ..
+npm install
 
 # 如果你用yarn
-yarn install && cd server && yarn install && cd ..
+yarn install
 
 #启动
 npm start
