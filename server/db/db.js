@@ -15,4 +15,4 @@ const sequelize = new Sequelize(config.database,
   }
 )
 
-const Pet = sequelize.define('pet')
+const Pet = sequelize.define('pet').
