@@ -25,29 +25,41 @@ const Pet = sequelize.define('pet', {
   type: Sequelize.STRING(100),
   weight: Sequelize.FLOAT(4, 2)
 }, {
+  tableName: 'pets_table',
   timestamps: false
 })
 
-//增加数据
 /** *
-!(async () => {
-  const cat = await Pet.create({
-    id: 5,
-    name: '毛毛',
-    type: '兔子',
-    weight: 4.18
+//增删查改基本功能
+const createData = async (model, data) => {
+  await model.create(data)
+}
+
+const queryData = async (model, condition) => {
+  let r = await model.findAll({
+    where: condition
   })
-  return console.log(`创建了${JSON.stringify(cat)}`)
-})()
+  return r
+}
+
+const updateData = async (model, condition, data) => {
+  let models = await queryData(model, condition)
+  for (let item of models) {
+    for (let key in data) {
+      item[key] = data[key]
+    }
+    await item.save()
+  }
+}
+
+const delData = async (model, condition) => {
+  let models = await queryData(model, condition)
+  for (let item of models) {
+    await item.destroy()
+  }
+}
+
+updateData(Pet, {type: '蟑螂'}, {name: '张大强'})
+// createData(Pet, {id: 1, name: '小强', type: '蟑螂', weight: 0.45})
 /** */
 
-!(async () => {
-  const pets = await Pet.findAll({
-    where: {
-      id: 3
-    }
-  })
-  for (let p of pets) {
-    console.log(JSON.stringify(p))
-  }
-})()
