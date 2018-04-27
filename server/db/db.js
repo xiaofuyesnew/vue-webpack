@@ -29,6 +29,12 @@ const Pet = sequelize.define('pet', {
   timestamps: false
 })
 
+const models = {
+  Pet: Pet
+}
+
+
+module.exports = models
 /** *
 //增删查改基本功能
 const createData = async (model, data) => {
